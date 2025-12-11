@@ -9,6 +9,7 @@ const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 // import { supabase } from "@/integrations/supabase/client";
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
+    flowType: "pkce",
     storage: localStorage,
     persistSession: true,
     autoRefreshToken: true,
